@@ -11,7 +11,7 @@ import { DynamoDBDocument } from "@aws-sdk/lib-dynamodb";
 const ddbDocClient = DynamoDBDocument.from(client); // client is DynamoDB client
 
 const accountSid = "ACf8d0f691faa3c1557b9e901ade2450dc";
-const authToken = "17f08b4abb6070da350289c54cce92ef";
+const authToken = process.env.AUTH_TOKEN;
 import twilio from "twilio";
 // const { Twilio } = twilio
 const twilioClient = twilio(accountSid, authToken);
