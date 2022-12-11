@@ -74,7 +74,7 @@ export const handler = (event, context, callback) => {
         .create({
              body: "KX Technology Communications: Thank you for enrolling your child(ren) in the Web Development/Deploymemnt class. You are now enrolled in text notificaitons for this class. To opt out text STOP. Msg&Data Rates May Apply.",
              from: '+12057494326',
-             to: '+12403709092'
+             to: '+1' + String(phone_number)
         }).then(message => console.log(message.sid));
     }).catch((err) => {
         console.error(err);
