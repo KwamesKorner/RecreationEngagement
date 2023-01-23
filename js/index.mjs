@@ -39,8 +39,6 @@ export const handler = (event, context, callback) => {
     console.log(requestBody);
     
     const name = requestBody.name;
-    
-    const student_name = requestBody.student_name;
 
     const phone_number = requestBody.phone_number;
 
@@ -48,7 +46,7 @@ export const handler = (event, context, callback) => {
     
     const communication_consent = requestBody.communication_consent;
 
-    recordStudent(name, student_name, phone_number, user_email, communication_consent).then(() => {
+    recordStudent(name, phone_number, user_email, communication_consent).then(() => {
         // You can use the callback function to provide a return value from your Node.js
         // Lambda functions. The first parameter is used for failed invocations. The
         // second parameter specifies the result data of the invocation.
@@ -60,7 +58,6 @@ export const handler = (event, context, callback) => {
             statusCode: 201,
             body: JSON.stringify({
                 name: name,
-                student_name: student_name,
                 phone_number: phone_number,
                 email: user_email,
                 communication_consent: communication_consent
@@ -72,7 +69,7 @@ export const handler = (event, context, callback) => {
         });
         twilioClient.messages
         .create({
-             body: "KX Technology Communications: Thank you for enrolling your child(ren) in the Web Development/Deploymemnt class. You are now enrolled in text notificaitons for this class. To opt out text STOP. Msg&Data Rates May Apply.",
+             body: "KX Technology Communications: Thank you for Signing Up! You are now enrolled in text notificaitons for this class. To opt out text STOP. Msg&Data Rates May Apply.",
              from: '+12057494326',
              to: '+1' + String(phone_number)
         }).then(message => console.log(message.sid));
@@ -87,16 +84,12 @@ export const handler = (event, context, callback) => {
     });
 };
 
-function recordStudent(name, student_name, phone_number, user_email, communication_consent) {
+function recordStudent(name, phone_number, user_email, communication_consent) {
     return ddbDocClient.put({
-        TableName: 'BHCC-Classes',
+        TableName: 'Pop-Up-Class',
         Item: {
-            class: "Web Development/Deploymemnt",
-            activityCode: "14601",
-            sectionCode: "106A",
-            classTitle: "Web Development/Deploymemnt",
+            class: "Computational Thinking",
             name: name,
-            student_name: student_name,
             phoneNumber: phone_number,
             email: user_email,
             communication_consent: communication_consent

@@ -22,12 +22,6 @@
           </div>
 
           <div>
-            <label for="student_name">Student's Name:</label>
-            <input type="text" id="student_name" name="student_name" required>
-            <small>For more than one student, separate names with a comma</small>
-          </div>
-
-          <div>
             <label for="phone">Mobile Number</label>
             <input type="tel" id="phone" name="phone_number" pattern="[0-9]{10}"
             required>
@@ -38,7 +32,7 @@
             <input type="email" id="mail" name="user_email" required>
           </div>
 
-          <input type="checkbox" id="consent" name="communication_consent"><label class="light">I consent to receiving text/email alerts regarding this class and other classes offerd by BHCC</label><br>
+          <input type="checkbox" id="consent" name="communication_consent"><label class="light">I consent to receiving text/email alerts regarding this class and other pop-up classes offered by the KX Technology Group</label><br>
         </fieldset>
         <button type="submit">Sign Up</button>
         
@@ -65,7 +59,7 @@
             return response; // parses JSON response into native JavaScript objects
           }
 
-          postData('https://09no2nd4la.execute-api.us-east-1.amazonaws.com/prod/insertstudent', value)
+          postData('https://09no2nd4la.execute-api.us-east-1.amazonaws.com/prod/insertpopupstudent', value)
             .then((data) => {
               location.href = "success.html"
             });

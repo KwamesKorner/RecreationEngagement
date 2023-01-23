@@ -12,6 +12,7 @@
  form {
    max-width: 300px;
    margin: 10px auto;
+   margin-top: 3%;
    padding: 10px 20px;
    background: #f4f7f8;
    border-radius: 8px;
@@ -66,24 +67,24 @@
  button {
    padding: 19px 39px 18px 39px;
    color: #FFF;
-   background-color: #4bc970;
+   background-color: #5daee7;
    font-size: 18px;
    text-align: center;
    font-style: normal;
    border-radius: 5px;
    width: 100%;
-   border: 1px solid #3ac162;
+   border: 1px solid #5094c4;
    border-width: 1px 1px 3px;
    box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
    margin-bottom: 10px;
  }
 
  button:active {
-  background-color: #348c4e;
+  background-color: #4a8bb8;
  }
  
  button:hover {
-  background-color: #3ca059;
+  background-color: #4e90bf;
  }
 
  fieldset {
@@ -107,7 +108,7 @@
  }
 
  a {
-  color: #3ac162;
+  color: #5daee7;
   text-decoration: none;
  }
  
