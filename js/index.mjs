@@ -72,7 +72,7 @@ export const handler = (event, context, callback) => {
         });
         twilioClient.messages
         .create({
-             body: "KX Technology Communications: Thank you for enrolling your child(ren) in the Web Development/Deploymemnt class. You are now enrolled in text notificaitons for this class. To opt out text STOP. Msg&Data Rates May Apply.",
+             body: "KX Technology Communications: Thank you for enrolling your child(ren) in the Python Game Development Class. You are now enrolled in text notificaitons for this class. To opt out text STOP. Msg&Data Rates May Apply.",
              from: '+12057494326',
              to: '+1' + String(phone_number)
         }).then(message => console.log(message.sid));
@@ -91,10 +91,10 @@ function recordStudent(name, student_name, phone_number, user_email, communicati
     return ddbDocClient.put({
         TableName: 'BHCC-Classes',
         Item: {
-            class: "Web Development/Deploymemnt",
+            class: "Intro to Game Development In Python",
             activityCode: "14601",
             sectionCode: "106A",
-            classTitle: "Web Development/Deploymemnt",
+            classTitle: "Intro to Game Development In Python",
             name: name,
             student_name: student_name,
             phoneNumber: phone_number,
