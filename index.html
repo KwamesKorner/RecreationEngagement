@@ -32,7 +32,7 @@
             <input type="email" id="mail" name="user_email" required>
           </div>
 
-          <input type="checkbox" id="consent" name="communication_consent"><label class="light">I consent to receiving text/email alerts regarding this class and other pop-up classes offered by the KX Technology Group</label><br>
+          <!-- <input type="checkbox" id="consent" name="communication_consent"><label class="light">I consent to receiving text/email alerts regarding this class and other pop-up classes offered by the KX Technology Group</label><br> -->
         </fieldset>
         <button type="submit">Sign Up</button>
         
@@ -46,7 +46,7 @@
 
           const data = new FormData(event.target);
           const value = Object.fromEntries(data.entries());
-          value.communication_consent = document.querySelector('#consent').checked
+          value.communication_consent = false;//document.querySelector('#consent').checked
 
           async function postData(url = '', data = {}) {
             // Default options are marked with *
