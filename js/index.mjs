@@ -91,7 +91,7 @@ export const handler = (event, context, callback) => {
 
 function recordStudent(name, student_name, phone_number, user_email, communication_consent) {
     return ddbDocClient.put({
-        TableName: 'BHCC-Classes',
+        TableName: 'FWCC-Classes',
         Item: {
             class: "Intro to Game Development In Python",
             activityCode: "14601",

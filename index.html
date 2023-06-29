@@ -70,7 +70,7 @@
           submit_form.innerHTML = '';
           submit_form.appendChild(loading);
 
-          postData('https://09no2nd4la.execute-api.us-east-1.amazonaws.com/prod/insertstudent', value)
+          postData('https://09no2nd4la.execute-api.us-east-1.amazonaws.com/prod/insertpopupstudent', value)
             .then((data) => {
               location.href = "success.html"
             });
