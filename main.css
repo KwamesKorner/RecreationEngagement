@@ -66,24 +66,24 @@
  button {
    padding: 19px 39px 18px 39px;
    color: #FFF;
-   background-color: #4bc970;
+   background-color: #e43a0f;
    font-size: 18px;
    text-align: center;
    font-style: normal;
    border-radius: 5px;
    width: 100%;
-   border: 1px solid #3ac162;
+   border: 1px solid #bb3b1b;
    border-width: 1px 1px 3px;
    box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
    margin-bottom: 10px;
  }
 
  button:active {
-  background-color: #348c4e;
+  background-color: #bb3b1b;
  }
  
  button:hover {
-  background-color: #3ca059;
+  background-color: #d23913;
  }
 
  fieldset {
@@ -107,12 +107,12 @@
  }
 
  a {
-  color: #3ac162;
+  color: #e43a0f;
   text-decoration: none;
  }
  
  .number {
-   background-color: #5fcf80;
+   background-color: #e43a0f;
    color: #fff;
    height: 30px;
    width: 30px;

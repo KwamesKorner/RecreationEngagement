@@ -93,10 +93,10 @@ function recordStudent(name, student_name, phone_number, user_email, communicati
     return ddbDocClient.put({
         TableName: 'FWCC-Classes',
         Item: {
-            class: "Intro to Game Development In Python",
+            class: "Intro to Programming In Python",
             activityCode: "14601",
             sectionCode: "106A",
-            classTitle: "Intro to Game Development In Python",
+            classTitle: "Intro to Programming In Python",
             name: name,
             student_name: student_name,
             phoneNumber: phone_number,
